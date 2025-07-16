@@ -17,7 +17,7 @@ public class NoticiaController {
 
     @Autowired
     private NoticiaServicio noticiaServicio;
-
+    
     @GetMapping("/filtrar/{localia}")
     public ResponseEntity<List<NoticiaDTO>> filtrarPorLocalia(@PathVariable String localia){
         return ResponseEntity.ok(noticiaServicio.filtrarPorLocalia(localia));
